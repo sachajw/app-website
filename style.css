@@ -46,7 +46,7 @@ body {
     /*
     CHALLENGE: change the main color to one you like!
     */
-    --main-color: var(--royal);
+    --main-color: var(--candy);
 
      /*
     CHALLENGE: change the font to one you think is cool
@@ -59,14 +59,12 @@ body {
     /*
     BONUS CHALLENGE: adjust how many columns you'd like to have
     */
-   column-count: 2;
+   column-count: 3;
    column-gap: 10px;
 }
 
 
 .img {
-    /*
     border-image: var(--sweets) 100;
-    */
 
 }
