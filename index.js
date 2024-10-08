@@ -11,17 +11,17 @@ const loadData = (options) => {
     .then(function(response){
         return response.json()
     })
-    .then(function(data){ 
+    .then(function(data){
        if (options.onSuccess) options.onSuccess(data)
     })
 }
 
 const App = (props) => {
   let [photos, setPhotos] = useState([]);
-  
+
   // CHALLENGE:
   // Change the query to one of your interests
-  let [query, setQuery] = useState("");
+  let [query, setQuery] = useState("surfing");
   const queryInput = useRef(null);
 
   const numberOfPhotos = 20;
@@ -46,7 +46,7 @@ const App = (props) => {
     e.preventDefault();
     setQuery(queryInput.current.value);
   };
-  
+
   return (
     <div className="box">
       <h2>{props.emoji}</h2>
@@ -61,10 +61,10 @@ const App = (props) => {
                 src={photo.urls.regular}
               />
               <div className="caption">
-                <span className="credits">Photo by 
-                  <a href={photo.user.links.html + utm}>   {photo.user.name} 
+                <span className="credits">Photo by
+                  <a href={photo.user.links.html + utm}>   {photo.user.name}
                   </a>
-                  <span> on </span> 
+                  <span> on </span>
                   <a href={"https://unsplash.com" + utm}>
                     Unsplash
                   </a>
@@ -79,4 +79,4 @@ const App = (props) => {
 };
 
 // CHALLENGE: add your own name and emoji to the website
-ReactDOM.render(<App name="Someone" emoji="👋"/>, document.getElementById("root"));
+ReactDOM.render(<App name="TheVestedLeopard" emoji="🐆"/>, document.getElementById("root"));
